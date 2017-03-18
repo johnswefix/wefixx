@@ -8,7 +8,7 @@
                 <div class="panel-heading">Welcome</div>
 
                 <div class="panel-body">
-                    JOHNS Application's Landing Page.
+                    JOHNS.......................wefix Application's Landing Page.
                 </div>
             </div>
         </div>
