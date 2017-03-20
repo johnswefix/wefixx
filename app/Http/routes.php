@@ -15,7 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::group(['middleware'=>'wefixer'] ,function() {
 
+
+    Route::get('/wefixer', function () {
+
+        return view('wefixer.index');
+    });
+
+});
+Route::get('/user'  ,function(){
+return view('user.index');
+});
 
 Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@showLoginForm']);
 Route::post('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@login']);
@@ -33,6 +44,4 @@ Route::post('password/reset', ['as' => 'auth.password.reset', 'uses' => 'Auth\Pa
 
 
 
-
-
-Route::get('/home', 'HomeController@index');
+Route::get('/fix', 'RoleController@index');
